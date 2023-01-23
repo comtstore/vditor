@@ -4,7 +4,11 @@ export const merge = (...options: any[]) => {
         for (const prop in obj) {
             if (obj.hasOwnProperty(prop)) {
                 if (Object.prototype.toString.call(obj[prop]) === "[object Object]") {
-                    target[prop] = merge(target[prop], obj[prop]);
+                    if(obj[prop].constructor === Object){
+                      target[prop] = merge(target[prop], obj[prop]);
+                    }else {
+                      target[prop] = obj[prop]
+                    }
                 } else {
                     target[prop] = obj[prop];
                 }

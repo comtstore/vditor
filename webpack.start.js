@@ -119,6 +119,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       VDITOR_VERSION: JSON.stringify(pkg.version),
+      VDITOR_NAME: JSON.stringify(pkg.name)
     }),
     new CopyPlugin({
       patterns: [

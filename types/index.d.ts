@@ -236,8 +236,8 @@ declare const webkitAudioContext: {
 
 interface ITip {
   element?: HTMLElement;
-  show: (text: string, time?: number) => void;
-  hide: () => void;
+  show(text: string, time?: number): void;
+  hide(): void;
 }
 
 interface ITips {

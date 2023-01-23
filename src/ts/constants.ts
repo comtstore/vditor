@@ -1,8 +1,11 @@
 declare const VDITOR_VERSION: string;
+declare const VDITOR_NAME: string;
 
 const _VDITOR_VERSION = VDITOR_VERSION;
+const _VDITOR_NAME = VDITOR_NAME;
 
 export {_VDITOR_VERSION as VDITOR_VERSION};
+export {_VDITOR_NAME as VDITOR_NAME};
 
 export abstract class Constants {
   public static readonly ZWSP: string = "\u200b";
@@ -29,7 +32,7 @@ export abstract class Constants {
     // ext
     "solidity", "yul"
   ];
-  public static readonly CDN = `https://unpkg.com/vditor@${VDITOR_VERSION}`;
+  public static readonly CDN = `https://unpkg.com/@comtstore/${VDITOR_NAME}@${VDITOR_VERSION}`;
   public static readonly MARKDOWN_OPTIONS = {
     autoSpace: false,
     codeBlockPreview: true,

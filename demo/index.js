@@ -48,6 +48,20 @@ if (window.innerWidth < 768) {
       ],
     }]
 }
+
+class Tip {
+  constructor(){}
+
+  show(text, time = 6000){
+      console.log("🚀 ~ file: Tip.ts:3 ~ Tip ~ show ~ time", time)
+      console.log("🚀 ~ file: Tip.ts:3 ~ Tip ~ show ~ text", text)
+  }
+
+  hide(){
+      console.log('do nothing')
+  }
+}
+
 const initVditor = (language) => {
   window.vditor = new Vditor('vditor', {
     // _lutePath: `http://192.168.31.194:9090/lute.min.js?${new Date().getTime()}`,
@@ -61,6 +75,7 @@ const initVditor = (language) => {
       enable: true,
       position: 'right',
     },
+    // tip: new Tip(),
     debugger: true,
     typewriterMode: true,
     placeholder: 'Hello, Vditor!',
