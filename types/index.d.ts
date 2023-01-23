@@ -1,5 +1,3 @@
-import { ITip } from "../src/ts/tip/interface";
-
 declare module "*.svg";
 
 declare module "*.png";
@@ -238,7 +236,7 @@ declare const webkitAudioContext: {
 
 interface ITip {
   element?: HTMLElement;
-  show: (text: string, time: number) => void;
+  show: (text: string, time?: number) => void;
   hide: () => void;
 }
 
