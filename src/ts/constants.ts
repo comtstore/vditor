@@ -32,7 +32,7 @@ export abstract class Constants {
     // ext
     "solidity", "yul"
   ];
-  public static readonly CDN = `https://unpkg.com/@comtstore/${VDITOR_NAME}@${VDITOR_VERSION}`;
+  public static readonly CDN = `https://unpkg.com/${VDITOR_NAME}@${VDITOR_VERSION}`;
   public static readonly MARKDOWN_OPTIONS = {
     autoSpace: false,
     codeBlockPreview: true,
