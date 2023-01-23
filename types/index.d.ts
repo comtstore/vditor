@@ -1,3 +1,5 @@
+import { ITip } from "../src/ts/tip/interface";
+
 declare module "*.svg";
 
 declare module "*.png";
@@ -233,6 +235,12 @@ declare const webkitAudioContext: {
     prototype: AudioContext
     new(contextOptions?: AudioContextOptions): AudioContext,
 };
+
+interface ITip {
+  element?: HTMLElement;
+  show: (text: string, time: number) => void;
+  hide: () => void;
+}
 
 interface ITips {
     [index: string]: string;
@@ -660,6 +668,8 @@ interface IOptions {
         position: "left" | "right",
     };
 
+    tip?: ITip;
+
     /** 编辑器异步渲染完成后的回调方法 */
     after?(): void;
 
@@ -727,11 +737,7 @@ interface IVditor {
         genHTML(data: IHintData[], key: string, vditor: IVditor): void
         select(event: KeyboardEvent, vditor: IVditor): boolean,
     };
-    tip: {
-        element: HTMLElement
-        show(text: string, time?: number): void
-        hide(): void,
-    };
+    tip: ITip;
     upload?: {
         element: HTMLElement
         isUploading: boolean

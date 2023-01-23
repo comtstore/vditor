@@ -70,7 +70,10 @@ export const initUI = (vditor: IVditor) => {
 
   contentElement.appendChild(vditor.hint.element);
 
-  contentElement.appendChild(vditor.tip.element);
+  // 如果没有传递自定义tip实现
+  if(vditor.tip.element){
+    contentElement.appendChild(vditor.tip.element);
+  }
 
   vditor.element.appendChild(contentElement);
 

@@ -449,7 +449,7 @@ class Vditor extends VditorMethod {
             options: mergedOptions,
             originalInnerHTML: id.innerHTML,
             outline: new Outline(window.VditorI18n.outline),
-            tip: new Tip(),
+            tip: mergedOptions.tip ? new mergedOptions.tip() : new Tip(),
         };
 
         this.vditor.sv = new Editor(this.vditor);
